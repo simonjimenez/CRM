@@ -1,0 +1,8 @@
+<%= simple_form_for @contact do |c| %>
+<%= c.input :email %>
+<%= c.input :name %>
+<%= c.input :number %>
+<%= c.input :status, collection: ["prospect","interested", "client"] %>
+<%= c.input :date %>
+<%= c.submit %>
+<%end %>

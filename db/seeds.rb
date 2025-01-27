@@ -9,4 +9,3 @@ User.create!(
 
   ]
 )
-puts "usuarios creados exitosamente"

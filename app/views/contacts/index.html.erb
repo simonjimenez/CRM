@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Name</th>
+      <th scope="col">Number</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date</th>
+      <th scope="col">Added by</th>
+      <th scope="col">Conversations</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @contacts.each do |c| %>
+      <tr>
+      <td><%= c.email %></td>
+      <td><%= c.name %></td>
+      <td><%= c.number %></td>
+      <td><%= c.status %></td>
+      <td><%= c.date %></td>
+      <td><%= c.user_email %></td>
+      <td><%= c.conversations.count  %></td>
+      <td><%= link_to "See more", contact_path(c) %> | <%= link_to "Edit",  edit_contact_path(c) %></td>
+      </tr>
+
+      <% end %>
+
+    </tr>
+  </tbody>
+</table>

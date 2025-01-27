@@ -1,0 +1,13 @@
+<div class="container">
+<%= simple_form_for [@contact, @conversation] do |c| %>
+<%= c.input :detail %>
+<%= c.submit class: "btn btn-success" %> <%= link_to "Go back", contacts_path, class: "btn btn-danger" %>
+<%end %>
+</div>
+
+<div class="container">
+<% @contact.conversations.each do |conversation| %>
+  <hr>
+  <p><%= conversation.detail %></p>
+<% end %>
+</div>

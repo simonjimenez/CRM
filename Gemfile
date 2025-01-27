@@ -60,3 +60,4 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+gem 'simple_form'
