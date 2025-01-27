@@ -2,6 +2,9 @@ class ContactsController < ApplicationController
   before_action :set_contact, only: ["show", "edit", "update", "destroy"]
   def index
     @contacts = Contact.all
+    @interested = Contact.where(status:"interested").count
+    @prospect = Contact.where(status:"prospect").count
+    @client  = Contact.where(status:"client").count
   end
 
   def show

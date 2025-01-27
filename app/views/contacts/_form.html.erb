@@ -1,8 +1,11 @@
-<%= simple_form_for @contact do |c| %>
-<%= c.input :email %>
-<%= c.input :name %>
-<%= c.input :number %>
-<%= c.input :status, collection: ["prospect","interested", "client"] %>
-<%= c.input :date %>
-<%= c.submit %>
-<%end %>
+<div class="container mt-5 shadow border p-3">
+ <h2 class="text-primary text-center"> <%= @contact.new_record? ? "NEW" : "EDIT" %></h2>
+  <%= simple_form_for @contact do |c| %>
+    <%= c.input :email %>
+    <%= c.input :name %>
+    <%= c.input :number %>
+    <%= c.input :status, collection: ["prospect","interested", "client"] %>
+    <%= c.input :date %>
+    <%= c.submit class: "btn btn-success" %> <%= link_to "Go back", contacts_path, class: "btn btn-warning" %>
+  <%end %>
+</div>

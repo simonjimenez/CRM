@@ -1,4 +1,24 @@
-<table class="table">
+<h1 class="text-secondary text-center"><strong>PROSPECTS</strong> <span ><%= link_to "New prospect", new_contact_path, class:"f-6" %></span> </h1>
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th scope="col"><h2 class="text-primary"><%= @prospect %></h2></th>
+      <th scope="col"><h2 class="text-warning"><%= @interested %></h2></th>
+      <th scope="col"><h2 class="text-success"><%= @client %></h2></th>
+
+    </tr>
+  </thead>
+    <tbody>
+      <td><strong>Prospect</strong></td>
+      <td><strong>Interested</strong></td>
+      <td><strong>Client</strong></td>
+    </tbody>
+  </table>
+
+
+
+
+<table class="table mt-5">
   <thead>
     <tr>
       <th scope="col">Email</th>
