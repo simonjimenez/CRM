@@ -21,3 +21,5 @@ Things you may want to cover:
 
 * Captures
   ![screenshot](public/homepage.png)
+  ![screenshot](public/contacts.png)
+  ![screenshot](public/conversations.png)
